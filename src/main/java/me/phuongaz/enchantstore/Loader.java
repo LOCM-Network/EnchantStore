@@ -1,5 +1,6 @@
 package me.phuongaz.enchantstore;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -16,11 +17,11 @@ public class Loader extends PluginBase{
         _instance = this;
         saveDefaultConfig();
         if(!getConfig().exists("enchants")){
-            List<String> ids = getConfig().getStringList("enchants");
-            for(int i = 0; i >= 30; i++){
+            List<String> ids = new ArrayList<>();
+            for(int i = 0; i <= 30; i++){
                 Enchantment enchant = Enchantment.getEnchantment(i);
-                if(enchant != null){
-                    ids.add(enchant + ":10000");
+                if(enchant instanceof Enchantment){
+                    ids.add(enchant.getId() + ":10000");
                 }
             } 
             getConfig().set("enchants", ids);   

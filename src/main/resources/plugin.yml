@@ -1,5 +1,5 @@
-name: phuongaz
+name: EnchantStore
 api: ["1.0.0"]
 version: 1.0
-main: me.phuongaz.enchantstore
+main: me.phuongaz.enchantstore.Loader
 author: phuongaz
