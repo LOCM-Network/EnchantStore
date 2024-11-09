@@ -8,6 +8,7 @@ public class EnchantCommand extends Command{
     
     public EnchantCommand(){
         super("enchanter", "Buy enchant");
+        this.setPermission("enchanter.use");
     }
 
     @Override

@@ -10,7 +10,7 @@ import cn.nukkit.plugin.PluginBase;
 public class Loader extends PluginBase{
 
     private static Loader _instance;
-    private static LinkedHashMap<Integer, Integer> enchants = new LinkedHashMap<>();
+    private static final LinkedHashMap<Integer, Integer> enchants = new LinkedHashMap<>();
 
     @Override
     public void onEnable(){
@@ -20,7 +20,7 @@ public class Loader extends PluginBase{
             List<String> ids = new ArrayList<>();
             for(int i = 0; i <= 30; i++){
                 Enchantment enchant = Enchantment.getEnchantment(i);
-                if(enchant instanceof Enchantment){
+                if(enchant != null){
                     ids.add(enchant.getId() + ":10000");
                 }
             } 
